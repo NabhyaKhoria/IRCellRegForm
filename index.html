@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-image: url("nkbg.jpg");
+            background-repeat: no-repeat;
+            /*background-attachment: fixed;*/
+            background-size: cover;
+            background-position:0px 180px;
+        }
+        .nkm{
+            border: 1px solid gray;
+            /*position:relative;
+            top:50px;
+            left:400px;
+
+            
+            right:1px;*/
+            background-image: url("nkmg3.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding:50px;
+            width:500px;
+            margin:auto;
+        }
+        h1{
+            font-size: 50px;
+            text-shadow: 1px 1px 2px black;
+        }
+        label{
+            font-size:20px;
+        }
+        #sub{
+            width:100px;
+            height:40px;
+        }
+        #sub:hover{
+            background-color: rgb(228, 218, 218);
+            background-image: url("logo.png");
+            background-repeat: no-repeat;
+            background-size: 50px 40px;
+            background-position:10%;
+            border: 2px solid;
+
+        }
+        .nkm2{
+            position:fixed;
+            bottom:0;
+            right:0;
+        }
+        #lg{
+            width:40px;
+            height:40px;
+        }
+    </style>
+</head>
+<body>
+<img src="ircelllogo2.png" alt="logo" width="100%" height="150">
+<br><br><div class="nkm">
+<h1>Registration Form</h1>
+<form>
+    <label form="fname">First Name:</label>
+    <input type="text" id="fname" name="fname" required><br><br>
+    <label form="lname">Last Name:</label>
+    <input type="text" id="lname" name="lname" required><br><br>
+    <label>Gender:</label><br>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br><br>
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob"><br><br>
+    <label for="pass">Password:</label>
+    <input type="password" id="pas" name="pas"><br><br>
+    <label for="emid">Email ID:</label>
+    <input type="email" id="emid" name="emid required"><br><br>
+    <label for="Country">Country:</label>
+    <input type="text" id="Country" name="Country" value="India" readonly><br><br>
+   
+    <label for="states">State: </label>
+    <select id="states" name="states">
+        <option>Arunachal Pradesh  </option>
+
+        <option>Assam   </option>
+
+            <option>Bihar   </option>
+
+                <option>Chhattisgarh   </option>
+
+                <option>Goa   </option>
+
+                    <option>Gujarat   </option>
+
+                        <option>Haryana   </option>
+
+                            <option>Himachal Pradesh   </option>
+
+                                <option>Jammu </option>
+
+                                    <option>Jharkhand   </option>
+
+                                        <option>Karnataka   </option>
+
+                                            <option>Kerala   </option>
+
+                                                <option>Madhya Pradesh   </option>
+
+                                                    <option>Maharashtra   </option>
+
+                                                        <option>Manipur   </option>
+
+                                                            <option>Meghalaya   </option>
+
+                                                                <option>Mizoram   </option>
+
+                                                                    <option>Nagaland   </option>
+
+                                                                        <option>Odisha   </option>
+
+                                                                            <option>Punjab   </option>
+
+                                                                                <option>Rajasthan   </option>
+
+                                                                                    <option>Sikkim   </option>
+
+                                                                                        <option>Tamil Nadu   </option>
+
+                                                                                            <option>Tripura   </option>
+
+                                                                                                <option>Uttar Pradesh   </option>
+
+                                                                                                    <option>Uttarakhand   </option>
+
+                                                                                                        <option>West Bengal   </option>
+
+                                                                                                            <option>Telangana   </option>
+
+                                                                                                                <option>Andaman and Nicobar Islands  </option> 
+
+                                                                                                                    <option>Chandigarh   </option>
+
+                                                                                                                        <option>Dadra and Nagar Haveli and Daman and Diu  </option>
+
+                                                                                                                            <option>Kashmir   </option>
+
+                                                                                                                                <option>Ladakh   </option>
+
+                                                                                                                                    <option>Lakshadweep   </option>
+
+                                                                                                                                        <option>Delhi  </option>
+
+                                                                                                                                            <option>Puducherry </option>
+    </select><br><br>
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" required><br><br>
+    <label for="tel">Contact No.:</label>
+    <input type="tel" id="tel" name="tel" size="10" maxlength="10" required><br><br>
+    <label>Team(s) you wish to apply:</label><br>
+    <input type="checkbox" id="team1" name="team1">
+    <label for="team1">Junior Associate</label><br>
+    <input type="checkbox" id="team2" name="team2">
+    <label for="team2">Web Team</label><br>
+    <input type="checkbox" id="team3" name="team3">
+    <label for="team3">Videography Team</label><br>
+    <input type="checkbox" id="team4" name="team4">
+    <label for="team4">Design Team</label><br>
+
+    <br><br>
+    <input type="submit" id="sub" value="Register">
+</div>
+<div class="nkm2"><a href="https://ircell.iitkgp.ac.in/" >
+<img src="logo.png" alt="logo" id="lg" title="Click me to visit us"></a>
+</div>
+</form>
+</body>
+</html>
