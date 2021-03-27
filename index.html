@@ -1,9 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+          .col-3 {width: 25%;}
+         .col-4 {width: 33.33%;}
+         .col-5 {width: 41.66%;}
+       .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+       .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+        .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
         body {
-            background-image: url("nkbg.jpg");
+            background-image: url("nkbg4.jpg");
             background-repeat: no-repeat;
             /*background-attachment: fixed;*/
             background-size: cover;
@@ -17,7 +44,7 @@
 
             
             right:1px;*/
-            background-image: url("nkmg3.jpg");
+            background-image: url("nkmg4.jpg");
             background-repeat: no-repeat;
             background-size: cover;
             padding:50px;
@@ -53,33 +80,44 @@
             width:40px;
             height:40px;
         }
+        .header{
+            padding:15px;
+        }
+        @media only screen and (max-width: 600px) {
+
+  [class*="col-"] {
+    width: 100%;
+  }}
     </style>
 </head>
-<body>
+<body><div class="header">
 <img src="ircelllogo2.png" alt="logo" width="100%" height="150">
-<br><br><div class="nkm">
+</div>
+<br><br>
+<div class="row"><div class="col-2"></div>
+<div class="col-8">    <div class="nkm">
 <h1>Registration Form</h1>
-<form>
-    <label form="fname">First Name:</label>
-    <input type="text" id="fname" name="fname" required><br><br>
-    <label form="lname">Last Name:</label>
-    <input type="text" id="lname" name="lname" required><br><br>
+<form name="myForm" onsubmit="return validateForm()">
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" name="fname" onmouseover="this.style.border='1px solid red'" onmouseout="this.style.border='1px solid black'" onmousedown="this.style.border='2px solid red'"><br><br>
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname" name="lname" onmouseover="this.style.border='1px solid red'" onmouseout="this.style.border='1px solid black'" onmousedown="this.style.border='2px solid red'" required><br><br>
     <label>Gender:</label><br>
-    <input type="radio" id="male" name="gender" value="male">
+    <input type="radio" id="male" name="gender" value="male" onmouseover="this.style.border='1px solid red'" onmouseout="this.style.border='1px solid black'" onmousedown="this.style.border='2px solid red'">
     <label for="male">Male</label><br>
-    <input type="radio" id="female" name="gender" value="female">
+    <input type="radio" id="female" name="gender" value="female" onmouseover="this.style.border='1px solid red'" onmouseout="this.style.border='1px solid black'" onmousedown="this.style.border='2px solid red'">
     <label for="female">Female</label><br><br>
     <label for="dob">Date of Birth:</label>
-    <input type="date" id="dob" name="dob"><br><br>
+    <input type="date" id="dob" name="dob" onmouseover="this.style.border='1px solid red'" onmouseout="this.style.border='1px solid black'" onmousedown="this.style.border='2px solid red'" required><br><br>
     <label for="pass">Password:</label>
-    <input type="password" id="pas" name="pas"><br><br>
+    <input type="password" id="pas" name="pas" onmouseover="this.style.border='1px solid red'" onmouseout="this.style.border='1px solid black'" onmousedown="this.style.border='2px solid red'" required><br><br>
     <label for="emid">Email ID:</label>
-    <input type="email" id="emid" name="emid required"><br><br>
+    <input type="email" id="emid" name="emid" onmouseover="this.style.border='1px solid red'" onmouseout="this.style.border='1px solid black'" onmousedown="this.style.border='2px solid red'" required><br><br>
     <label for="Country">Country:</label>
-    <input type="text" id="Country" name="Country" value="India" readonly><br><br>
+    <input type="text" id="Country" name="Country" value="India" onmouseover="this.style.border='1px solid red'" onmouseout="this.style.border='1px solid black'" onmousedown="this.style.border='2px solid red'" readonly><br><br>
    
     <label for="states">State: </label>
-    <select id="states" name="states">
+    <select id="states" name="states" onmouseover="this.style.border='1px solid red'" onmouseout="this.style.border='1px solid black'" onmousedown="this.style.border='2px solid red'">
         <option>Arunachal Pradesh  </option>
 
         <option>Assam   </option>
@@ -153,11 +191,10 @@
                                                                                                                                             <option>Puducherry </option>
     </select><br><br>
     <label for="city">City:</label>
-    <input type="text" id="city" name="city" required><br><br>
+    <input type="text" id="city" name="city" onmouseover="this.style.border='1px solid red'" onmouseout="this.style.border='1px solid black'" onmousedown="this.style.border='2px solid red'" required><br><br>
     <label for="tel">Contact No.:</label>
-    <input type="tel" id="tel" name="tel" size="10" maxlength="10" required><br><br>
+    <input type="tel" id="tel" name="tel" size="10" maxlength="10" onmouseover="this.style.border='1px solid red'" onmouseout="this.style.border='1px solid black'" onmousedown="this.style.border='2px solid red'" required><br><br>
     <label>Team(s) you wish to apply:</label><br>
-    <input type="checkbox" id="team1" name="team1">
     <label for="team1">Junior Associate</label><br>
     <input type="checkbox" id="team2" name="team2">
     <label for="team2">Web Team</label><br>
@@ -171,7 +208,52 @@
 </div>
 <div class="nkm2"><a href="https://ircell.iitkgp.ac.in/" >
 <img src="logo.png" alt="logo" id="lg" title="Click me to visit us"></a>
-</div>
+</div></div><div class="col-2"></div>
 </form>
+</div>
+<script>
+function nkover(id){
+    id.style.border="1px solid red";
+}
+function nkout(id){
+    id.style.border = "0px";
+}
+
+
+function validateForm(){
+    var x = document.forms["myForm"]["fname"].value;
+    if(x==""){
+        alert("First Name is required");
+        return false;
+    }
+    var y = document.forms["myForm"]["gender"].value;
+    if(y==""){
+        alert("Gender is required");
+        return false;
+    }
+    var z = document.forms["myForm"]["states"].value;
+    if(z==""){
+        alert("State is required");
+        return false;
+    }
+    var a = document.forms["myForm"]["pas"].value;
+    var b = a.toString();
+    var c = b.length;
+    if(c<8){
+        alert("Password too short");
+        return false;
+    }
+    else if(c>12){
+        alert("Password too long");
+        return false;
+    }
+    var d = document.forms["myForm"]["emid"].value;
+    var e = d.toString();
+    if(e.indexOf(".com")==-1&&e.indexOf(".in")==-1){
+        alert("Invalid Email");
+        return false;
+    }
+}
+</script>
 </body>
 </html>
